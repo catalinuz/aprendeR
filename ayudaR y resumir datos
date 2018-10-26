@@ -5,7 +5,7 @@ help(nls) # documentación sobre la palabra buscada
 help.search("nls") # busqueda en el sistema
 apropos("nls") # busca nombres que tienen algo que que ver
 help.start() # abre la version HTML de la ayuda 
-
+RSiteSearch("nls") # buscar solo en el http://search.r-project.org
 abc <- c(1,2,3,4)
 
 str(abc) # muestra la estructura interna del objeto
@@ -17,6 +17,10 @@ ls(pat="b") # muestra los objetos que tienen el patron especificado ej: b
 ls.str() # por cada variable en cada recurso
 dir() # ver los ficheros del directorio actual
 
-methods(abc) # shows S3 methods of a
+getwd() # ver el directorio de trabajo 
+setwd() # establecer/cambiar el directorio de trabajo
+setwd(choose.file) # navegar hasta la carpeta
+
+methods(abc) # List all available methods for a S3 and S4 generic function, or all methods for an S3 or S4 class
 methods(class=class(abc)) # lists all the methods to handle objects of
 
