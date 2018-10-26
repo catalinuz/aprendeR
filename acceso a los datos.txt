@@ -1,7 +1,25 @@
-###################################################
+                   ####
 library(downloader) 
 url <- "https://unaweb.com/carpeta/elarchivo.csv"
 filename <- "elarchivo.csv" 
 download(url, destfile=filename)
-###################################################
 
+                   ####
+browseURL("http://unaweb/carpeta/archivo.R")
+
+                   ####
+#  la función source ejecuta todos los comandos contenidos en el archivo:
+source("archivo.R")
+
+
+#  importar y exportar tablas de datos
+read.table 
+write.table
+#  guardar o cargar el área de trabajo u otros objetos de R
+save
+save.image
+load
+#  manipular carpetas y ficheros
+dir.create
+unlink
+file.path
