@@ -1,0 +1,22 @@
+https://rextester.com/l/r_online_compiler
+
+help(nls) # documentación sobre la palabra buscada
+?nls
+help.search("nls") # busqueda en el sistema
+apropos("nls") # busca nombres que tienen algo que que ver
+help.start() # abre la version HTML de la ayuda 
+
+abc <- c(1,2,3,4)
+
+str(abc) # muestra la estructura interna del objeto
+summary(abc) # muestra un resumen de los estadisticos más relevantes
+class (abc) # muestra el tipo de dato
+
+ls() # muestra todos los objetos del recurso 
+ls(pat="b") # muestra los objetos que tienen el patron especificado ej: b 
+ls.str() # por cada variable en cada recurso
+dir() # ver los ficheros del directorio actual
+
+methods(abc) # shows S3 methods of a
+methods(class=class(abc)) # lists all the methods to handle objects of
+
