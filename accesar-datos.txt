@@ -1,0 +1,6 @@
+###################################################
+library(downloader) 
+url <- "https://unaweb.com/carpeta/elarchivo.csv"
+filename <- "elarchivo.csv" 
+download(url, destfile=filename)
+###################################################
