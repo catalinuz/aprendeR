@@ -1,25 +1,48 @@
-                   ####
+https://github.com/jumanbar/Curso-R/blob/newrep1/lecciones/2-extra-nombrar-elementos-de-objetos.R 
+
+
+library(x) # carga el paquete...x
+       
+       #### descargar desde la WEB  ####
 library(downloader) 
 url <- "https://unaweb.com/carpeta/elarchivo.csv"
 filename <- "elarchivo.csv" 
 download(url, destfile=filename)
-
                    ####
 browseURL("http://unaweb/carpeta/archivo.R")
 
-                   ####
-#  la función source ejecuta todos los comandos contenidos en el archivo:
-source("archivo.R")
 
+         #### LEER archivos ####
 
-#  importar y exportar tablas de datos
-read.table 
+data(x) # carga el dataset...x
+
+read.table(file) # lee fichero y lo crea como df, separador por defecto es sep="" espacio; header=TRUE; as.is=TRUE para evitar que los caracteres sean convertidos a factores;comment.char="" para evitar que "#" sea interpretado como un comentario, skip=n salta n filas antes de leer los datos
+read.csv("filename",header=TRUE), por defecto lee ficheros comma-delimited
+read.delim("filename",header=TRUE), por defecto lee ficheros tab-delimited
+read.fwf(file,widths,header=FALSE,sep="",as.is=FALSE) # lee tabla de ancho fijo como un df
+
+       #### GUARDAR archivos ####
+       
+save(file,...)  # saves the specified objects (...) in the XDR platform independent binary format
+save.image(file)  # saves all objects
+load() # carga los datasets guardados con save
+
 write.table
-#  guardar o cargar el área de trabajo u otros objetos de R
-save
-save.image
-load
-#  manipular carpetas y ficheros
+write.table(x,file="",row.names=TRUE,col.names=TRUE, sep=" ")  # prints x after converting to a data frame; if quote is TRUE
+
+   #### manipular carpetas y ficheros  ####
+   
 dir.create
 unlink
 file.path
+
+   #### otras  ####
+
+cat(..., file="", sep=" ")  # prints the arguments after coercing to character; sep is the character separator between arguments
+print(a, ...)  # prints its arguments; generic, meaning it can have different methods for different objects
+format(x,...)  # format an R object for pretty printing
+
+      #### lanzar un fichero  ####
+
+#  la función source ejecuta todos los comandos contenidos en el archivo:
+source("archivo.R")
